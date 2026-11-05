@@ -26,13 +26,13 @@
 <style>
 /* Layout: "Ayodhya Pravesh" — a walk through the city. Gate → Royal Road → ten named places; archetypes A (carved chamber) / B (open courtyard) / C (colonnade) alternate */
 :root{
-  --stone:#EADBC8; --stone-deep:#D9BBA0; --ink:#2B1E18; --muted:#6E5546; --sindoor:#B3382C; --gold:#9A6E1E; --gold-hi:#E6B54A; --sarayu:#2F5F7A; --rule:#C4A484;
+  --stone:#EFDCCB; --stone-deep:#E0C0A6; --ink:#2A1C1A; --muted:#6F5450; --sindoor:#B23A2A; --gold:#9C6A16; --gold-hi:#F0B548; --sarayu:#3D4A8A; --rule:#C9A58C;
   --basalt:#17121b; --basalt-2:#221a27; --basalt-ink:#F1E3CC; --basalt-rule:#3e3142;
   --display:"Rozha One","Martel",Georgia,serif; --body:"Martel",Georgia,serif; --util:"Khand","Martel",system-ui,sans-serif; --skt:"Tiro Devanagari Sanskrit","Rozha One",serif;
   color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--stone:#141019; --stone-deep:#1F1824; --ink:#F1E3CC; --muted:#B5A28F; --sindoor:#E0604F; --gold:#E6B54A; --gold-hi:#F3D27C; --sarayu:#7FA8C4; --rule:#3A2E3C; color-scheme:dark}}
-:root[data-theme="dark"]{--stone:#141019; --stone-deep:#1F1824; --ink:#F1E3CC; --muted:#B5A28F; --sindoor:#E0604F; --gold:#E6B54A; --gold-hi:#F3D27C; --sarayu:#7FA8C4; --rule:#3A2E3C; color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--stone:#15111f; --stone-deep:#211a30; --ink:#F3E4CF; --muted:#B8A6A0; --sindoor:#EC6A4A; --gold:#F0B548; --gold-hi:#F7D27E; --sarayu:#9AA6E6; --rule:#3a2f48; color-scheme:dark}}
+:root[data-theme="dark"]{--stone:#15111f; --stone-deep:#211a30; --ink:#F3E4CF; --muted:#B8A6A0; --sindoor:#EC6A4A; --gold:#F0B548; --gold-hi:#F7D27E; --sarayu:#9AA6E6; --rule:#3a2f48; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--stone);color:var(--ink);font:400 16px/1.7 var(--body);margin:0;overflow-x:hidden}
@@ -105,6 +105,13 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;paddin
 .narr.on{opacity:1}
 .narr span{display:inline;background:#111;color:#F6E05E;font:700 clamp(1rem,2.4vw,1.45rem)/1.6 var(--body);padding:3px 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
+
+.place.has-banner{padding-top:0}
+.banner3d{position:relative;height:clamp(240px,46vw,560px);overflow:hidden;margin-bottom:-90px;background:#17121b}
+@media (max-width:640px){.banner3d{height:62vw;min-height:250px;margin-bottom:-40px}.has-banner .phead{padding:16px 14px 12px}}
+.banner3d .bfade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--stone) 98%);pointer-events:none}
+.banner3d .bcap{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:14px;font:600 .74rem var(--util);letter-spacing:.16em;text-transform:uppercase;color:#FAF0E2;background:rgba(17,17,17,.55);padding:4px 10px}
+.has-banner .phead{position:relative;background:var(--stone);padding:22px 22px 18px;border-top:3px solid var(--gold);max-width:860px;box-shadow:none}
 .d3{position:absolute;inset:0;width:100%;height:100%;display:block;background:#17121b center/cover no-repeat}
 .scene #gate{z-index:1}
 .scene .title{z-index:2}
@@ -625,6 +632,13 @@ img{max-width:100%}
   <div class="pil"><svg><use href="#s-pillar"/></svg></div></div>
 </div></section>
 
+<section class="interlude" id="lanka" aria-label="Across the sea">
+  <div class="stick"><canvas class="d3" data-img="img/lanka.jpg" data-depth="img/lanka_d.jpg" data-strength="0.03" aria-hidden="true"></canvas>
+    <div class="shade"></div>
+    <div class="ilab"><div class="skt">स्वर्ण लङ्का · Svarna Lanka</div><h2>Across the sea</h2></div>
+    <div class="caps"><p><span>Far to the south, on a rock in the ocean, stands a city of gold.</span></p><p><span>Its king has ten heads, and he has taken Sita.</span></p><p><span>To reach her, Rama must cross the sea.</span></p></div>
+  </div>
+</section>
 <section class="interlude" id="yuddha" aria-label="The war to come">
   <div class="stick"><canvas class="d3" data-img="img/battle.jpg" data-depth="img/battle_d.jpg" data-strength="0.03" aria-hidden="true"></canvas>
     <div class="shade"></div>
@@ -642,7 +656,8 @@ img{max-width:100%}
   </div>
 </div></section>
 <div class="dehli">You pass into the Council Hall</div>
-<section class="place" id="sabha" data-place="3"><div class="wrap">
+<section class="place has-banner" id="sabha" data-place="3"><div class="banner3d"><canvas class="d3" data-img="img/mithila.jpg" data-depth="img/mithila_d.jpg" data-strength="0.03" aria-hidden="true"></canvas><div class="bfade"></div><span class="bcap">The great hall of Mithila</span></div>
+<div class="wrap">
   <div class="phead"><svg class="disc"><use href="#s-sun"/></svg><div class="skt">राजसभा · Rajasabha</div><h2>The council of critics</h2><p>Each seat on the hall floor is one review on a 0 to 100 scale: filled red for Indian press, open blue for international. Tap a seat to hear its verdict.</p></div>
   <div class="niches" id="niches"></div>
   <div class="ctlrow" style="margin-top:22px;justify-content:flex-end"><div class="seg" role="group" aria-label="Filter reviews"><button data-r="all" aria-pressed="true">All</button><button data-r="India" aria-pressed="false">India</button><button data-r="International" aria-pressed="false">World</button></div></div>
@@ -675,7 +690,8 @@ img{max-width:100%}
   </div>
 </section>
 <div class="dehli">You take the Road of Exile</div>
-<section class="place" id="marg" data-place="5"><div class="wrap">
+<section class="place has-banner" id="marg" data-place="5"><div class="banner3d"><canvas class="d3" data-img="img/forest.jpg" data-depth="img/forest_d.jpg" data-strength="0.03" aria-hidden="true"></canvas><div class="bfade"></div><span class="bcap">The Dandaka forest</span></div>
+<div class="wrap">
   <div class="phead"><svg class="disc"><use href="#s-sun"/></svg><div class="skt">वनवास मार्ग · Vanavasa Marga</div><h2>The road of exile</h2><p>Carved into the city wall: Part 1 covers the first three books of Valmiki's epic, the Bala, Ayodhya and Aranya Kandas, ending with Sita taken. The unfinished carving is Part 2.</p></div>
   <div class="relief"><svg id="relief" viewBox="0 0 1000 360" role="img" aria-label="Relief map of the road of exile"></svg></div>
   <div class="stopbar" id="stopbar"></div>
@@ -711,7 +727,8 @@ img{max-width:100%}
 </div></section>
 
 <div class="dehli">You come down to the Sarayu</div>
-<section class="place" id="ghat" data-place="10"><div class="wrap">
+<section class="place has-banner" id="ghat" data-place="10"><div class="banner3d"><canvas class="d3" data-img="img/ghats.jpg" data-depth="img/ghats_d.jpg" data-strength="0.03" aria-hidden="true"></canvas><div class="bfade"></div><span class="bcap">The ghats of the Sarayu at dawn</span></div>
+<div class="wrap">
   <div class="phead"><svg class="disc"><use href="#s-sun"/></svg><div class="skt">सरयू घाट · Sarayu Ghat</div><h2>Light a lamp for the best performance</h2><p id="pollNote">As Ayodhya lit lamps for Rama's return, light one diya for whoever owned the screen. One lamp per person; the ghats update live.</p></div>
   <div class="ghatgrid">
     <div><div class="ghats" id="ghats"></div><div class="water"></div><div class="note" id="pollTotal"></div></div>
@@ -749,7 +766,7 @@ const W = "https://en.wikipedia.org/wiki/";
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const ic = n => `<svg viewBox="0 0 48 48" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const NS = "http://www.w3.org/2000/svg";
-const PLACES = [["top", "नगर द्वार", "City Gate"], ["kosha", "कोषगृह", "Treasury"], ["natya", "नाट्यशाला", "Playhouse"], ["tirtha", "दर्शन द्वार", "Ticket Gate"], ["sabha", "राजसभा", "Council Hall"], ["darbar", "राजदरबार", "Palace Court"], ["marg", "वनवास मार्ग", "Road of Exile"], ["sangeet", "संगीत मण्डप", "Music Pavilion"], ["shilpa", "शिल्पशाला", "Sculptors' Yard"], ["vidya", "विद्या मण्डप", "Gurukul"], ["stambha", "शिला स्तम्भ", "Edict Pillars"], ["ghat", "सरयू घाट", "Sarayu Ghat"]];
+const PLACES = [["top", "नगर द्वार", "City Gate"], ["kosha", "कोषगृह", "Treasury"], ["natya", "नाट्यशाला", "Playhouse"], ["lanka", "स्वर्ण लङ्का", "Across the sea"], ["tirtha", "दर्शन द्वार", "Ticket Gate"], ["sabha", "राजसभा", "Council Hall"], ["darbar", "राजदरबार", "Palace Court"], ["marg", "वनवास मार्ग", "Road of Exile"], ["sangeet", "संगीत मण्डप", "Music Pavilion"], ["shilpa", "शिल्पशाला", "Sculptors' Yard"], ["vidya", "विद्या मण्डप", "Gurukul"], ["stambha", "शिला स्तम्भ", "Edict Pillars"], ["ghat", "सरयू घाट", "Sarayu Ghat"]];
 
 /* ---------- currency ---------- */
 const CUR = ["INR", "USD", "NZD", "AUD", "GBP", "EUR", "AED", "CAD"];
