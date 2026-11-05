@@ -331,5 +331,217 @@
       "text": "Says India's national epic gets a fittingly massive cinematic treatment.",
       "url": "https://www.sacnilk.com/reviews/ramayana_part_1_2026_Review-of-Reviews"
     }
-  ]
+  ],
+  "cinemas": {
+    "IN": {
+      "name": "India",
+      "list": [
+        {
+          "name": "BookMyShow",
+          "url": "https://in.bookmyshow.com/",
+          "note": ""
+        },
+        {
+          "name": "PVR INOX",
+          "url": "https://www.pvrcinemas.com/",
+          "note": ""
+        },
+        {
+          "name": "Cinepolis India",
+          "url": "https://www.cinepolisindia.com/",
+          "note": ""
+        }
+      ]
+    },
+    "US": {
+      "name": "United States",
+      "list": [
+        {
+          "name": "Atom Tickets",
+          "url": "https://www.atomtickets.com/movies/ramayana-rise-of-a-legend/395593",
+          "note": "Film page"
+        },
+        {
+          "name": "Fandango",
+          "url": "https://www.fandango.com/",
+          "note": ""
+        },
+        {
+          "name": "AMC Theatres",
+          "url": "https://www.amctheatres.com/",
+          "note": ""
+        },
+        {
+          "name": "Regal",
+          "url": "https://www.regmovies.com/",
+          "note": ""
+        }
+      ]
+    },
+    "CA": {
+      "name": "Canada",
+      "list": [
+        {
+          "name": "Cineplex",
+          "url": "https://www.cineplex.com/",
+          "note": ""
+        }
+      ]
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "list": [
+        {
+          "name": "ODEON",
+          "url": "https://www.odeon.co.uk/",
+          "note": ""
+        },
+        {
+          "name": "Cineworld",
+          "url": "https://www.cineworld.co.uk/",
+          "note": ""
+        },
+        {
+          "name": "Vue",
+          "url": "https://www.myvue.com/",
+          "note": ""
+        }
+      ]
+    },
+    "IE": {
+      "name": "Ireland",
+      "list": [
+        {
+          "name": "ODEON Ireland",
+          "url": "https://www.odeoncinemas.ie/",
+          "note": ""
+        },
+        {
+          "name": "Cineworld Ireland",
+          "url": "https://www.cineworld.ie/",
+          "note": ""
+        }
+      ]
+    },
+    "AU": {
+      "name": "Australia",
+      "list": [
+        {
+          "name": "Event Cinemas",
+          "url": "https://www.eventcinemas.com.au/",
+          "note": ""
+        },
+        {
+          "name": "HOYTS",
+          "url": "https://www.hoyts.com.au/",
+          "note": ""
+        },
+        {
+          "name": "Village Cinemas",
+          "url": "https://villagecinemas.com.au/",
+          "note": ""
+        }
+      ]
+    },
+    "NZ": {
+      "name": "New Zealand",
+      "list": [
+        {
+          "name": "Event Cinemas",
+          "url": "https://www.eventcinemas.co.nz/",
+          "note": ""
+        },
+        {
+          "name": "HOYTS",
+          "url": "https://www.hoyts.co.nz/",
+          "note": ""
+        },
+        {
+          "name": "Reading Cinemas",
+          "url": "https://www.readingcinemas.co.nz/",
+          "note": ""
+        }
+      ]
+    },
+    "AE": {
+      "name": "United Arab Emirates",
+      "list": [
+        {
+          "name": "VOX Cinemas",
+          "url": "https://uae.voxcinemas.com/",
+          "note": ""
+        },
+        {
+          "name": "Novo Cinemas",
+          "url": "https://www.novocinemas.com/",
+          "note": ""
+        },
+        {
+          "name": "Reel Cinemas",
+          "url": "https://www.reelcinemas.com/",
+          "note": ""
+        }
+      ]
+    },
+    "SG": {
+      "name": "Singapore",
+      "list": [
+        {
+          "name": "Golden Village",
+          "url": "https://www.gv.com.sg/",
+          "note": ""
+        },
+        {
+          "name": "Shaw Theatres",
+          "url": "https://shaw.sg/",
+          "note": ""
+        }
+      ]
+    },
+    "MY": {
+      "name": "Malaysia",
+      "list": [
+        {
+          "name": "GSC",
+          "url": "https://www.gsc.com.my/",
+          "note": ""
+        },
+        {
+          "name": "TGV Cinemas",
+          "url": "https://www.tgv.com.my/",
+          "note": ""
+        }
+      ]
+    },
+    "DE": {
+      "name": "Germany",
+      "list": [
+        {
+          "name": "CineStar",
+          "url": "https://www.cinestar.de/",
+          "note": ""
+        }
+      ]
+    },
+    "ZA": {
+      "name": "South Africa",
+      "list": [
+        {
+          "name": "Ster-Kinekor",
+          "url": "https://www.sterkinekor.com/",
+          "note": ""
+        }
+      ]
+    }
+  },
+  "cinemaDefault": {
+    "name": "Anywhere else",
+    "list": [
+      {
+        "name": "IMAX showtimes",
+        "url": "https://www.imax.com/movie/ramayana",
+        "note": "Worldwide"
+      }
+    ]
+  }
 }
