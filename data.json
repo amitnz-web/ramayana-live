@@ -1,0 +1,293 @@
+{
+  "updated": "2026-11-06T09:30:00+13:00",
+  "status": "In cinemas",
+  "phase": "Opening weekend",
+  "releaseIndia": "2026-11-05",
+  "diwali": "2026-11-08",
+  "part2": "2027-10-29",
+  "boxOffice": {
+    "breakeven": 1600,
+    "breakevenNote": "Trade estimate of worldwide gross needed to recover costs (Bollymoviereviewz)",
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-11-05",
+        "label": "Thu",
+        "indiaNet": 64.85,
+        "indiaGross": 77.5,
+        "overseasGross": null,
+        "shows": 25200,
+        "tickets": 2525775
+      }
+    ],
+    "languagesDay1": [
+      {
+        "name": "Hindi",
+        "net": 47.5
+      },
+      {
+        "name": "Kannada",
+        "net": 7.25
+      },
+      {
+        "name": "Telugu",
+        "net": 6.0
+      },
+      {
+        "name": "Tamil + Malayalam",
+        "net": 4.1
+      }
+    ],
+    "advance": [
+      {
+        "label": "Day 1 India advance (gross, final)",
+        "cr": 50.08
+      },
+      {
+        "label": "Opening weekend pre-sales worldwide",
+        "cr": 100,
+        "plus": true
+      },
+      {
+        "label": "Overseas pre-sales",
+        "cr": 40,
+        "plus": true
+      },
+      {
+        "label": "North America premiere pre-sales",
+        "usd": 1065000
+      }
+    ],
+    "note": "India figures are Sacnilk estimates. Worldwide and overseas actuals not yet confirmed."
+  },
+  "scale": [
+    {
+      "label": "Budget, both parts",
+      "cr": 4000,
+      "sub": "the costliest Indian film"
+    },
+    {
+      "label": "Screens worldwide",
+      "value": "59,000",
+      "sub": "50,000 overseas, 9,000 in India"
+    },
+    {
+      "label": "Trailer views",
+      "value": "1B+",
+      "sub": "across languages in its first week"
+    },
+    {
+      "label": "Runtime",
+      "value": "3h 15m",
+      "sub": "IMAX, 4DX, Dolby, first Indian ScreenX release"
+    }
+  ],
+  "aggregates": [
+    {
+      "name": "Sacnilk critics",
+      "score": 76,
+      "of": 100,
+      "basis": "15 reviews"
+    },
+    {
+      "name": "Metacritic",
+      "score": 63,
+      "of": 100,
+      "basis": "5 critics"
+    },
+    {
+      "name": "Rotten Tomatoes",
+      "score": 45,
+      "of": 100,
+      "basis": "11 critics, % positive"
+    }
+  ],
+  "critics": [
+    {
+      "outlet": "Bollywood Hungama",
+      "critic": "Taran Adarsh",
+      "raw": "5/5",
+      "score": 100,
+      "region": "India",
+      "line": "Calls it an experience, not merely a film."
+    },
+    {
+      "outlet": "DNA",
+      "critic": "Simran Singh",
+      "raw": "4.5/5",
+      "score": 90,
+      "region": "India",
+      "line": "The most detailed, visually rich take on the epic."
+    },
+    {
+      "outlet": "India TV",
+      "critic": "India TV",
+      "raw": "4/5",
+      "score": 80,
+      "region": "India",
+      "line": "Faithful to the story's essence; Ranbir brings restraint and dignity."
+    },
+    {
+      "outlet": "IndieWire",
+      "critic": "Christian Zilko",
+      "raw": "B",
+      "score": 70,
+      "region": "International",
+      "line": "Never boring, though light on quiet character moments."
+    },
+    {
+      "outlet": "Screen Rant",
+      "critic": "Brandon Zachary",
+      "raw": "7/10",
+      "score": 70,
+      "region": "International",
+      "line": "A solid big-screen spectacle."
+    },
+    {
+      "outlet": "Gulte",
+      "critic": "Gulte",
+      "raw": "3/5",
+      "score": 60,
+      "region": "India",
+      "line": "Grand, and it keeps the Ramayana's soul despite slow patches."
+    },
+    {
+      "outlet": "Next Best Picture",
+      "critic": "Giovanni Lago",
+      "raw": "5/10",
+      "score": 50,
+      "region": "International",
+      "line": "Sweeping but overstuffed; the story may need more room."
+    },
+    {
+      "outlet": "Binged",
+      "critic": "Binged",
+      "raw": "2.5/5",
+      "score": 50,
+      "region": "India",
+      "line": "The scale works; the emotional core is thin."
+    },
+    {
+      "outlet": "IGN",
+      "critic": "Siddhant Adlakha",
+      "raw": "4/10",
+      "score": 40,
+      "region": "International",
+      "line": "Lavish but clunky."
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-11-05",
+      "text": "Opening day India net estimated near ₹65 Cr across five languages, with Hindi bringing about 73% of it.",
+      "src": "Sacnilk",
+      "url": "https://www.sacnilk.com/quicknews/ramayana_part_1_2026_Box_Office_Collection_Day_1"
+    },
+    {
+      "date": "2026-11-05",
+      "text": "Over 2.5 million tickets sold in India on day one.",
+      "src": "Sacnilk",
+      "url": "https://www.sacnilk.com/quicknews/ramayana_part_1_2026_Box_Office_Collection_Day_1"
+    },
+    {
+      "date": "2026-11-05",
+      "text": "Critics split: Indian press largely glowing, international reviews mixed.",
+      "src": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ramayana:_Part_1"
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Worldwide opening-weekend pre-sales cross ₹100 Cr gross.",
+      "src": "Sacnilk",
+      "url": "https://www.sacnilk.com/news/exclusive-ramayana-worldwide-advance-booking-tops-100-crore-gross-for-opening-weekend"
+    },
+    {
+      "date": "2026-10-31",
+      "text": "North America premiere pre-sales pass $1 million.",
+      "src": "Sacnilk",
+      "url": "https://www.sacnilk.com/news/ramayana-overseas-advance-hits-35m-as-1m-north-america-premiere-fuels-20m-opening-hopes"
+    }
+  ],
+  "rates": {
+    "asOf": "2026-11-05",
+    "source": "European Central Bank reference rates",
+    "perEUR": {
+      "INR": 106.0395,
+      "USD": 1.1224,
+      "GBP": 0.83393,
+      "AUD": 1.6033,
+      "NZD": 1.9966,
+      "CAD": 1.5675,
+      "EUR": 1
+    },
+    "AEDperUSD": 3.6725
+  },
+  "credit": {
+    "name": "Amit Sharma",
+    "site": "https://amitsharma.co.nz",
+    "marketing": "https://amitsharma.co.nz",
+    "webdesign": "https://amitsharma.co.nz",
+    "facebook": "https://www.facebook.com/AmitSharmaNZ",
+    "youtube": "https://www.youtube.com/@AmitSharmanz",
+    "instagram": null,
+    "tiktok": null
+  },
+  "socials": {
+    "Ranbir Kapoor": {
+      "note": "Ranbir Kapoor has no public social media accounts."
+    },
+    "Sai Pallavi": {
+      "instagram": "https://www.instagram.com/sai_pallavi92/",
+      "x": "https://x.com/Sai_Pallavi92",
+      "facebook": "https://www.facebook.com/SaiPallavi.S"
+    },
+    "Yash": {
+      "instagram": "https://www.instagram.com/thenameisyash/",
+      "x": "https://x.com/TheNameIsYash",
+      "facebook": "https://www.facebook.com/TheOfficialYash"
+    },
+    "Ravie Dubey": {
+      "instagram": "https://www.instagram.com/ravidubey2312/",
+      "x": "https://x.com/_ravidubey"
+    },
+    "Sunny Deol": {
+      "instagram": "https://www.instagram.com/iamsunnydeol/",
+      "x": "https://x.com/iamsunnydeol",
+      "facebook": "https://www.facebook.com/sunnydeol"
+    },
+    "Arun Govil": {
+      "instagram": "https://www.instagram.com/siyaramkijai/",
+      "x": "https://x.com/Arungovil12",
+      "facebook": "https://www.facebook.com/govilarun52"
+    },
+    "Lara Dutta": {
+      "instagram": "https://www.instagram.com/larabhupathi/",
+      "x": "https://x.com/LaraDutta",
+      "facebook": "https://www.facebook.com/LaraDuttaBhupathiOfficial"
+    },
+    "Kajal Aggarwal": {
+      "instagram": "https://www.instagram.com/kajalaggarwalofficial/",
+      "x": "https://x.com/MsKajalAggarwal",
+      "facebook": "https://www.facebook.com/ImKajalAggarwal",
+      "youtube": "https://www.youtube.com/channel/UCr1tgA4LWxttjEOR_ySEzDA"
+    },
+    "Rakul Preet Singh": {
+      "instagram": "https://www.instagram.com/rakulpreet/",
+      "x": "https://x.com/Rakulpreet",
+      "facebook": "https://www.facebook.com/ActressRakulPreet",
+      "youtube": "https://www.youtube.com/channel/UCtoaqVcJ_Q2xz04LlPAjHMQ"
+    },
+    "Anupam Kher": {
+      "instagram": "https://www.instagram.com/anupampkher/",
+      "x": "https://x.com/AnupamPKher",
+      "facebook": "https://www.facebook.com/anupamkherofficial"
+    },
+    "Vivek Oberoi": {
+      "instagram": "https://www.instagram.com/vivekoberoi/",
+      "facebook": "https://www.facebook.com/OfficialVO"
+    },
+    "Kunal Kapoor": {
+      "instagram": "https://www.instagram.com/kunalkkapoor/"
+    }
+  }
+}
