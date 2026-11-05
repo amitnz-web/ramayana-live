@@ -95,6 +95,15 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;paddin
 @keyframes flick{33%{opacity:.82}66%{opacity:1}}
 .lit .shim{animation:shim 4s ease-in-out infinite}
 @keyframes shim{50%{opacity:.25}}
+
+#atmos{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.dhwaja{transform-box:fill-box;transform-origin:left center;animation:wave 2.6s ease-in-out infinite}
+@keyframes wave{50%{transform:skewY(-9deg) scaleX(.86)}}
+.pen-f{transform-box:fill-box;transform-origin:center top;animation:sway 3.4s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(7deg)}}
+.narr{position:absolute;left:50%;top:clamp(90px,16%,150px);transform:translateX(-50%);z-index:3;max-width:min(92%,680px);text-align:center;opacity:0;transition:opacity .8s}
+.narr.on{opacity:1}
+.narr span{display:inline;background:#111;color:#F6E05E;font:700 clamp(1rem,2.4vw,1.45rem)/1.6 var(--body);padding:3px 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .title{position:absolute;left:0;right:0;bottom:0;padding:0 16px 22px;text-align:center;background:linear-gradient(transparent,rgba(23,18,27,.88) 55%)}
 .title .welcome{font:600 .82rem var(--util);letter-spacing:.3em;text-transform:uppercase;color:#F3D27C}
 .title h1{font-size:clamp(3.2rem,13vw,9.5rem);line-height:.9;background:linear-gradient(110deg,#9c6b1f,#F3D27C 42%,#E6B54A 62%,#7d541a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.0;transition:opacity .8s ease 3s,letter-spacing 1s cubic-bezier(.2,.9,.2,1) 3s;letter-spacing:.08em}
@@ -133,7 +142,7 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;paddin
 
 /* doorstep captions between places */
 .dehli{display:flex;align-items:center;gap:14px;justify-content:center;padding-top:72px;color:var(--muted);font:600 .8rem var(--util);letter-spacing:.2em;text-transform:uppercase}
-.dehli::before,.dehli::after{content:"";height:10px;flex:1;max-width:280px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Ccircle cx='10' cy='5' r='2' fill='%23B3382C' fill-opacity='.6'/%3E%3Cpath d='M0 5h6M14 5h6' stroke='%23C4A484'/%3E%3C/svg%3E") repeat-x center}
+.dehli::before,.dehli::after{content:"";height:26px;flex:1;max-width:320px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='26'%3E%3Cpath d='M0 6 Q14 14 28 6' fill='none' stroke='%236b8f3a' stroke-width='1.2'/%3E%3Ccircle cx='7' cy='9' r='4.2' fill='%23E8742C'/%3E%3Ccircle cx='21' cy='9' r='4.2' fill='%23F2B33D'/%3E%3Cpath d='M14 10 q-4 8 0 15 q4 -7 0 -15z' fill='%236b8f3a'/%3E%3C/svg%3E") repeat-x top}
 
 /* place heads */
 .place{padding-block:36px 24px}
@@ -223,7 +232,8 @@ img{max-width:100%}
 @keyframes drift{from{transform:scale(1.08) translateX(-1.5%)}}
 .theatre .scr::before,.theatre .scr::after{content:"";position:absolute;left:0;right:0;height:9%;background:#000;z-index:2}
 .theatre .scr::before{top:0}.theatre .scr::after{bottom:0}
-.theatre .subt{position:absolute;left:0;right:0;bottom:12%;z-index:3;text-align:center;padding:0 18px;font:italic 400 clamp(.95rem,2.2vw,1.3rem)/1.4 var(--body);text-shadow:0 2px 10px #000}
+.theatre .subt{position:absolute;left:0;right:0;bottom:12%;z-index:3;text-align:center;padding:0 18px;font:700 clamp(.95rem,2.2vw,1.3rem)/1.7 var(--body)}
+.theatre .subt span{background:#111;color:#F6E05E;padding:3px 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .theatre .subt b{display:block;font:600 .78rem var(--util);font-style:normal;letter-spacing:.24em;color:#F3D27C;text-transform:uppercase;margin-bottom:4px}
 .theatre .gr{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.12;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain .5s steps(4) infinite}
 @keyframes grain{25%{transform:translate(-2%,1%)}50%{transform:translate(1%,-2%)}75%{transform:translate(2%,2%)}}
@@ -503,8 +513,10 @@ img{max-width:100%}
 <div class="hero" id="top">
   <div class="scene" id="scene">
     <svg id="gate" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <canvas id="atmos" aria-hidden="true"></canvas>
+    <div class="narr" id="narr" aria-live="polite"></div>
     <div class="title">
-      <div class="welcome">Swagatam · the gates of Ayodhya are open</div>
+      <div class="welcome">Swagatam · Ayodhya welcomes you</div>
       <h1>Ramayana</h1>
       <div class="skt">॥ रामायण ॥</div>
     </div>
@@ -758,10 +770,23 @@ function buildGate(){
   s += `<g id="lySky"><rect width="1440" height="820" fill="url(#plum)"/><rect id="skyDawn" width="1440" height="820" fill="url(#dawn)"/>`;
   s += `<g id="sunRise"><circle cx="720" cy="470" r="150" fill="url(#sunG2)"/><circle cx="720" cy="470" r="62" fill="#ffe1a3"/></g>`;
   s += `</g><g id="lyCity">`;
-  // far bank skyline
-  s += `<g fill="#2a1b2c">`;
-  [[300, 130, 34], [380, 190, 44], [470, 150, 36], [560, 250, 60], [660, 180, 42], [760, 300, 70], [870, 200, 46], [960, 160, 38], [1060, 230, 54], [1160, 140, 34]].forEach(([x, h, w]) => { s += `<path d="M${x - w} 560 V${560 - h * .3} H${x + w} V560 Z M${x - w * .8} ${560 - h * .3} C ${x - w * .7} ${560 - h * .75}, ${x - w * .3} ${560 - h * .9}, ${x} ${560 - h} C ${x + w * .3} ${560 - h * .9}, ${x + w * .7} ${560 - h * .75}, ${x + w * .8} ${560 - h * .3} Z"/><rect x="${x - 1.2}" y="${560 - h - 16}" width="2.4" height="16"/>`; });
-  s += `<rect y="558" width="1440" height="16"/></g>`;
+  // far bank skyline: tiered nagara shikharas with gold courses and saffron dhwaja
+  s += `<g>`;
+  [[250, 120, 30], [340, 170, 40], [455, 130, 32], [575, 210, 50], [665, 150, 36], [735, 235, 56], [830, 160, 38], [930, 190, 44], [1040, 140, 32], [1150, 200, 46]].forEach(([x, h, w], k) => {
+    const b = 560, top = b - h;
+    s += `<path d="M${x - w} ${b} V${b - h * .14} H${x + w} V${b} Z" fill="#2a1d2e"/>`;
+    s += `<path d="M${x - w * .82} ${b - h * .14} C ${x - w * .72} ${b - h * .7}, ${x - w * .32} ${b - h * .92}, ${x} ${top} C ${x + w * .32} ${b - h * .92}, ${x + w * .72} ${b - h * .7}, ${x + w * .82} ${b - h * .14} Z" fill="#3a2838"/>`;
+    for (let t = 1; t < 7; t++){ const yy = b - h * .14 - (h * .78) * t / 7, half = w * .82 * Math.sqrt(1 - t / 7.4); s += `<path d="M${x - half} ${yy} H${x + half}" stroke="#b8862b" stroke-opacity="${.35 + .08 * t}" stroke-width="${k === 5 ? 2.2 : 1.4}"/>`; }
+    s += `<ellipse cx="${x}" cy="${top + 2}" rx="${w * .22}" ry="${w * .07}" fill="#b8862b" opacity=".8"/><path d="M${x} ${top - 2} v-22" stroke="#d9a441" stroke-width="2"/>`;
+    s += `<path class="dhwaja" style="animation-delay:${(k * .37).toFixed(2)}s" d="M${x} ${top - 24} l${18 + w * .18} 6 l-${18 + w * .18} 7 z" fill="${k % 2 ? "#e0702a" : "#c9382a"}"/>`;
+  });
+  s += `<rect y="558" width="1440" height="16" fill="#241a2a"/></g>`;
+  // bunting strings of saffron pennants swaying overhead
+  [[0, 210, 1440, 260, 120], [0, 300, 1440, 340, 90]].forEach(([x0, y0, x1, y1, sag], j) => {
+    let d = `M${x0} ${y0} Q720 ${(y0 + y1) / 2 + sag} ${x1} ${y1}`; s += `<g class="bunting b${j}"><path d="${d}" fill="none" stroke="#e8d5b5" stroke-opacity=".55" stroke-width="1.2"/>`;
+    for (let i = 1; i < 30; i++){ const t = i / 30, x = (1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * 720 + t * t * x1, y = (1 - t) * (1 - t) * y0 + 2 * (1 - t) * t * ((y0 + y1) / 2 + sag) + t * t * y1; const c = ["#e0702a", "#f2b33d", "#c9382a", "#e9c46a"][i % 4]; s += `<path class="pen-f" style="animation-delay:${(i * .11).toFixed(2)}s" d="M${x - 9} ${y} h18 l-9 ${18 - j * 4} z" fill="${c}" opacity=".9"/>`; }
+    s += `</g>`;
+  });
   // river Sarayu
   s += `<rect y="574" width="1440" height="120" fill="#24304a"/><g class="shim" opacity=".5">${waves(0, 1440, 596, 5, 20, 14, "#9fb9d4")}</g>`;
   // ghat steps + diyas
@@ -804,8 +829,36 @@ function walkThrough(){
     gate.setAttribute("transform", `translate(720 520) scale(${1 + k * 1.4}) translate(-720 -520)`); gate.style.opacity = 1 - k * .9;
     city.setAttribute("transform", `translate(720 560) scale(${1 + k * .18}) translate(-720 -560)`);
     sky.setAttribute("transform", `translate(0 ${k * 40})`);
-    t.style.transform = `translateY(${k * -60}px)`; t.style.opacity = 1 - k * 1.2; };
+    t.style.transform = `translateY(${k * -60}px)`; $("#narr").style.opacity = k > .05 ? 0 : ""; t.style.opacity = 1 - k * 1.2; };
   addEventListener("scroll", () => { if (!ticking){ ticking = true; requestAnimationFrame(upd); } }, { passive: true });
+}
+
+/* atmosphere: drifting storm-lit clouds and falling marigold petals */
+function atmosphere(){
+  const c = $("#atmos"), x = c.getContext("2d"), sc = $("#scene"); let w, hgt, dpr, clouds, petals, live = true;
+  const R = (a, b) => a + Math.random() * (b - a);
+  function size(){ dpr = Math.min(2, devicePixelRatio || 1); w = c.offsetWidth; hgt = c.offsetHeight; c.width = w * dpr; c.height = hgt * dpr; x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    clouds = Array.from({ length: 9 }, () => ({ x: R(-200, w), y: R(10, hgt * .35), r: R(80, 190), v: R(.05, .18), a: R(.08, .18) }));
+    petals = Array.from({ length: Math.round(w / 22) }, () => ({ x: R(0, w), y: R(-hgt, hgt), s: R(2.5, 5.5), v: R(.35, 1.1), d: R(-.4, .4), r: R(0, 6.3), vr: R(-.04, .04), c: Math.random() < .6 ? "#f08a24" : "#f6c445" })); }
+  function frame(){
+    if (!live){ requestAnimationFrame(frame); return; }
+    x.clearRect(0, 0, w, hgt);
+    for (const cl of clouds){ cl.x += cl.v; if (cl.x - cl.r > w) cl.x = -cl.r * 2; const g = x.createRadialGradient(cl.x, cl.y, 0, cl.x, cl.y, cl.r); g.addColorStop(0, `rgba(255,236,210,${cl.a})`); g.addColorStop(1, "rgba(255,236,210,0)"); x.fillStyle = g; x.beginPath(); x.ellipse(cl.x, cl.y, cl.r * 1.8, cl.r * .7, 0, 0, 7); x.fill(); }
+    if (sc.classList.contains("go")) for (const p of petals){ p.y += p.v; p.x += p.d + Math.sin((p.y + p.r * 40) / 60) * .3; p.r += p.vr; if (p.y > hgt + 10){ p.y = -10; p.x = R(0, w); } x.save(); x.translate(p.x, p.y); x.rotate(p.r); x.fillStyle = p.c; x.globalAlpha = .85; x.beginPath(); x.ellipse(0, 0, p.s, p.s * .55, 0, 0, 7); x.fill(); x.restore(); }
+    requestAnimationFrame(frame);
+  }
+  size(); addEventListener("resize", size);
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => { live = es[0].isIntersecting; }).observe(sc);
+  if (reduce){ live = true; frame(); live = false; return; }
+  requestAnimationFrame(frame);
+}
+/* documentary-style narration over the gate */
+const NARR = ["Long before the war, there was a city.", "Ayodhya, capital of Kosala, on the banks of the Sarayu.", "Ruled by the kings of the sun, it waited for a prince to come home.", "This is that story, counted live."];
+function narrate(){
+  const n = $("#narr"); let i = 0;
+  const show = () => { n.classList.remove("on"); setTimeout(() => { n.innerHTML = `<span>${NARR[i]}</span>`; n.classList.add("on"); i = (i + 1) % NARR.length; }, 700); };
+  if (reduce){ n.innerHTML = `<span>${NARR[0]}</span>`; n.classList.add("on"); return; }
+  setTimeout(() => { show(); setInterval(show, 4200); }, 3600);
 }
 function countUp(){ $$(".inscr .v[data-to]").forEach(n => { const to = +n.dataset.to, f = n.dataset.fmt, t0 = performance.now(); const run = now => { const k = reduce ? 1 : Math.min(1, (now - t0) / 900), e = 1 - Math.pow(1 - k, 3), v = to * e; n.textContent = f === "money" ? money(v) : f === "m" ? (v / 1e6).toFixed(2) + "M" : Math.round(v); if (k < 1) requestAnimationFrame(run); }; requestAnimationFrame(run); }); }
 
@@ -917,7 +970,7 @@ function showScene(k){
   sceneIdx = k; clearTimeout(sceneTimer);
   $$("#scr .sc").forEach(g => g.classList.toggle("on", +g.dataset.k === k));
   $$("#pips i").forEach((p, j) => { p.className = j < k ? "done" : j === k ? (scenePlaying ? "now" : "done") : ""; });
-  $("#subt").innerHTML = `<b>${SCENES[k][0]}</b>${SCENES[k][1]}`;
+  $("#subt").innerHTML = `<b>${SCENES[k][0]}</b><span>${SCENES[k][1]}</span>`;
   if (scenePlaying) sceneTimer = setTimeout(() => showScene((k + 1) % SCENES.length), 4600);
 }
 
@@ -1080,7 +1133,7 @@ function renderSources(){
 }
 
 function renderData(){ renderCoins(); renderInscr(); renderTicker(); renderBO(); renderCouncil(); renderShare(); renderSources(); }
-renderData(); buildGate(); buildPlan(); buildTheatre(); renderBanners(); initRing(); renderCast(); showBio(CAST.A[0]); buildRelief(); renderStatic(); initPoll();
+renderData(); buildGate(); atmosphere(); narrate(); buildPlan(); buildTheatre(); renderBanners(); initRing(); renderCast(); showBio(CAST.A[0]); buildRelief(); renderStatic(); initPoll();
 fetch("data.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.updated && j.updated >= D.updated && j.rates){ D = j; renderData(); renderStatic(); } }).catch(() => {});
 </script>
 
