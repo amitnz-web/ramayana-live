@@ -289,5 +289,47 @@
     "Kunal Kapoor": {
       "instagram": "https://www.instagram.com/kunalkkapoor/"
     }
-  }
+  },
+  "praise": [
+    {
+      "stars": 5,
+      "outlet": "Bollywood Hungama",
+      "critic": "Taran Adarsh",
+      "country": "India",
+      "text": "Calls it an experience rather than just a film, and a work that makes India proud.",
+      "url": "https://www.bollywoodhungama.com/movie/ramayana-part-i/critic-review/ramayana-part-i-movie-review/ramayana-is-not-merely-a-film-its-an-experience/"
+    },
+    {
+      "stars": 4.5,
+      "outlet": "DNA",
+      "critic": "Simran Singh",
+      "country": "India",
+      "text": "Praises the most detailed and visually rich screen version of the epic yet.",
+      "url": "https://www.sacnilk.com/reviews/ramayana_part_1_2026_Review-of-Reviews"
+    },
+    {
+      "stars": 4.5,
+      "outlet": "Reel Perspectives",
+      "critic": "",
+      "country": "International",
+      "text": "Sees a breathtaking epic that soars on the work of Ranbir Kapoor, Sai Pallavi and Yash.",
+      "url": "https://www.sacnilk.com/reviews/ramayana_part_1_2026_Review-of-Reviews"
+    },
+    {
+      "stars": 4,
+      "outlet": "India TV",
+      "critic": "",
+      "country": "India",
+      "text": "Finds a faithful retelling with grand visuals; Ranbir brings dignity to Rama and Yash commands as Ravana.",
+      "url": "https://www.indiatvnews.com/entertainment/movie-review/ramayana-movie-review-rating-ranbir-kapoor-yash-sai-pallavi-ravie-dubey-namit-malhotra-nitesh-tiwari-1406"
+    },
+    {
+      "stars": 3.5,
+      "outlet": "IndieWire",
+      "critic": "Christian Zilko",
+      "country": "United States",
+      "text": "Says India's national epic gets a fittingly massive cinematic treatment.",
+      "url": "https://www.sacnilk.com/reviews/ramayana_part_1_2026_Review-of-Reviews"
+    }
+  ]
 }
